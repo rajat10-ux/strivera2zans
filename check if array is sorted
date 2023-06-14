@@ -1,0 +1,16 @@
+#include<bits/stdc++.h>
+using namespace std;
+bool check(int*arr,int n){
+        int i;
+        for ( i = 1; i < n; i++)
+        {
+                if(arr[i]<arr[i-1])
+                return false;
+        }
+        return true;
+}
+int main(){
+int arr[6]={1,2,50,10,15,20};
+cout<<check(arr,6);
+return 0;
+}
