@@ -1,0 +1,8 @@
+Find the  maximum in array
+maxi=arr[0];
+for(i=0;i<n;++i){
+if(ar[i]>max){
+max=arr[i];
+}
+}
+print(max)
