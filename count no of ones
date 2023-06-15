@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+int arr[6]={1,1,0,1,1,1};
+int n=6,i,ans=0;
+int count=0,res=INT_MIN;
+for ( i = 0; i < n; i++)
+{
+  if(arr[i]==1){
+        count++;
+  }
+  else{
+        count=0;
+  }
+  count=max(res,count);
+}
+cout<<count;
+return 0;
+}
