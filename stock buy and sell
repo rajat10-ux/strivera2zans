@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+int arr[6]={7,1,5,3,6,4};
+int mini=0;
+int maxi=INT_MAX;
+int t=0;
+for ( int i = 0; i < 6; i++)
+{
+        maxi=min(maxi,arr[i]);
+        mini=max(mini,arr[i]-maxi);
+}
+cout<<mini;
+return 0;
+}
