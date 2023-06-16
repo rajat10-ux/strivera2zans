@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+void sume(int ind,vector<int>&ds,int s,int sum,int *arr,int n){
+        if(ind==n){
+                if(s==sum){
+                        for(auto it:ds) cout<<it<<" ";
+                                cout<<endl;
+                }
+                return;
+        }
+        ds.push_back(arr[ind]);
+           s+=arr[ind];
+         sume(ind+1,ds,s,sum,arr,n);
+        s-=arr[ind];
+      ds.pop_back();
+        sume(ind+1,ds,s,sum,arr,n);
+}
+int main(){
+int arr[4]={1,7,3,9};
+vector<int>ds;
+int n=4;
+sume(0,ds,0,10,arr,4);
+return 0;
+}
